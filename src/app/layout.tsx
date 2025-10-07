@@ -3,8 +3,9 @@ import { Inter } from "next/font/google";
 // @ts-ignore
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Sidebar } from "@/components/sidebar";
 
-const inter = Inter({ subsets: ['latin']});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -21,7 +22,8 @@ export default function RootLayout({
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
         inter.className
-  )}>
+      )}>
+        <Sidebar />
         {children}
       </body>
     </html>
